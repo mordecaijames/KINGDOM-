@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Successful | Kingdom Finance Conference 2026</title>
+<meta name="description" content="You're registered for Kingdom Finance Series 2026. See you there!">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="thank-you.css">
+</head>
+<body>
+
+<canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+<main class="ty-wrap">
+  <div class="ty-card glass-card">
+    <div class="ty-check" id="tyCheck">
+      <svg viewBox="0 0 52 52" width="64" height="64">
+        <circle cx="26" cy="26" r="25" fill="none" stroke="currentColor" stroke-width="2" opacity="0.25"/>
+        <path id="checkPath" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M14 27l7 7 17-17"/>
+      </svg>
+    </div>
+
+    <p class="ty-eyebrow">REGISTRATION SUCCESSFUL</p>
+    <h1 class="ty-title">Thank You For Registering<span id="tyName"></span>!</h1>
+    <p class="ty-sub">You're officially part of <strong>Kingdom Finance Conference 2026</strong>. A confirmation email is on its way to your inbox.</p>
+
+    <div class="ty-details">
+      <div class="ty-detail-row">
+        <span class="ty-label">Dates</span>
+        <span class="ty-value">5th, 12th, 19th &amp; 26th July 2026</span>
+      </div>
+      <div class="ty-detail-row">
+        <span class="ty-label">Time</span>
+        <span class="ty-value">4:00 PM WAT</span>
+      </div>
+      <div class="ty-detail-row">
+        <span class="ty-label">Venue</span>
+        <span class="ty-value">Lifegate People's Assembly, Opp. 2A Gwari Avenue, Barnawa, Kaduna State</span>
+      </div>
+      <div class="ty-detail-row">
+        <span class="ty-label">Contact</span>
+        <span class="ty-value">0802 828 2715</span>
+      </div>
+    </div>
+
+    <div class="ty-countdown">
+      <p class="countdown-label">Counting Down !!!</p>
+      <div class="countdown-grid">
+        <div class="countdown-cell"><span id="cdDays">00</span><small>Days</small></div>
+        <div class="countdown-cell"><span id="cdHours">00</span><small>Hours</small></div>
+        <div class="countdown-cell"><span id="cdMins">00</span><small>Mins</small></div>
+        <div class="countdown-cell"><span id="cdSecs">00</span><small>Secs</small></div>
+      </div>
+    </div>
+
+    <div class="ty-actions">
+      <button class="btn btn-primary" id="shareBtn">Share Event</button>
+      <button class="btn btn-ghost" id="calendarBtn">Add To Calendar</button>
+      <a class="btn btn-ghost" id="guideBtn" href="#">Download Event Guide</a>
+    </div>
+
+    <a href="index.html" class="ty-back">← Back to Home</a>
+  </div>
+</main>
+
+<script src="script.js"></script>
+<script src="thank-you.js"></script>
+</body>
+</html>
