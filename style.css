@@ -265,7 +265,7 @@ main, .site-header, .site-footer{ position:relative; z-index:1; }
 
 /* ============ SPEAKERS ============ */
 .speaker-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:22px; margin-bottom:10px; }
-.speaker-card{ padding:28px 22px; text-align:center; transition: transform .3s var(--ease); }
+.speaker-card{ padding:28px 22px; text-align:center; transition: transform .3s var(--ease);}
 .speaker-card:hover{ transform:translateY(-8px); }
 .speaker-photo{
   position:relative; overflow:hidden;
@@ -444,4 +444,137 @@ body {
 @media (max-width:600px){
   .section{ padding:70px 0; }
   .hero{ padding:120px 18px 60px; }
+}
+
+/* ============================================================
+   ============ ADDITIONAL RESPONSIVE FIXES (NEW) =============
+   Purely additive: tightens up breakpoints already started
+   above and adds coverage for tablet / small-phone sizes
+   without changing any existing rule.
+   ============================================================ */
+
+/* ---------- General container / spacing on small screens ---------- */
+@media (max-width:480px){
+  .container{ padding:0 16px; }
+}
+
+/* ---------- Navbar ---------- */
+@media (max-width:880px){
+  .navbar{ padding:0 16px; }
+  .brand-text{ font-size:.68rem; }
+}
+@media (max-width:420px){
+  .brand-text{ display:none; } /* keep just the mark on very small phones */
+  .nav-links{ width:84%; padding:32px 28px; }
+}
+
+/* ---------- Hero ---------- */
+@media (max-width:768px){
+  .hero{ min-height:auto; padding:130px 18px 70px; }
+  .hero-meta{ gap:10px; }
+  .meta-pill{ min-width:0; flex:1 1 140px; padding:10px 14px; }
+  .hero-cta-row{ width:100%; }
+  .hero-cta-row .btn{ flex:1 1 auto; }
+}
+@media (max-width:480px){
+  .hero-title .line, .series-line{ font-size:clamp(2.1rem, 11vw, 3.2rem); }
+  .series-line{ flex-wrap:wrap; gap:8px; }
+  .hero-subtitle{ font-size:1rem; }
+  .hero-meta{ flex-direction:column; align-items:stretch; }
+  .meta-pill{ width:100%; min-width:0; text-align:center; }
+  .hero-cta-row{ flex-direction:column; }
+  .hero-cta-row .btn{ width:100%; }
+  .countdown-grid{ gap:8px; }
+  .countdown-cell{ width:60px; height:60px; }
+  .countdown-cell span{ font-size:1.2rem; }
+  .scroll-cue{ display:none; }
+}
+
+/* ---------- Section titles ---------- */
+@media (max-width:480px){
+  .section-title{ padding:0 4px; }
+  .section-lead{ padding:0 6px; }
+}
+
+/* ---------- About cards (objectives block has nested headings) ---------- */
+@media (max-width:480px){
+  .about-card{ padding:24px 20px; }
+  .about-card h4{ font-size:.98rem; margin-top:10px; }
+}
+
+/* ---------- Why-attend cards ---------- */
+@media (max-width:480px){
+  .why-card{ padding:24px 20px; }
+}
+
+/* ---------- Speakers ---------- */
+@media (max-width:560px){
+  .speaker-card{ padding:22px 16px; }
+  .speaker-photo{ width:72px; height:72px; }
+}
+
+/* ---------- Schedule / timeline (nested cards on some items) ---------- */
+@media (max-width:600px){
+  .timeline{ margin-top:36px; }
+  .timeline-line{ left:18px; }
+  .timeline-item{ padding-left:54px; }
+  .timeline-dot{ width:38px; height:38px; font-size:.85rem; }
+  .timeline-card{ padding:18px 18px; }
+  .timeline-card h4{ font-size:1rem; }
+  .timeline-card .timeline-item{ padding-left:0; margin-top:14px; margin-bottom:0; }
+}
+@media (max-width:380px){
+  .timeline-item{ padding-left:46px; }
+  .timeline-dot{ width:32px; height:32px; font-size:.78rem; }
+}
+
+/* ---------- Testimonials ---------- */
+@media (max-width:600px){
+  .testimonial-card{ padding:28px 22px; }
+  .testimonial-quote{ font-size:1rem; }
+}
+
+/* ---------- Registration form ---------- */
+@media (max-width:480px){
+  .register-wrap{ padding:20px; }
+  .radio-group{ gap:8px; }
+  .radio-pill{ padding:8px 13px; font-size:.8rem; }
+  .btn-submit{ padding:14px 24px; }
+}
+
+/* ---------- FAQ ---------- */
+@media (max-width:480px){
+  .faq-question{ padding:16px 18px; font-size:.9rem; gap:10px; }
+  .faq-answer p{ padding:0 18px 16px; }
+}
+
+/* ---------- Contact ---------- */
+@media (max-width:480px){
+  .contact-row{ padding:16px 18px; flex-wrap:wrap; }
+  .social-row{ flex-wrap:wrap; }
+  .contact-map iframe{ height:240px; }
+}
+
+/* ---------- Footer ---------- */
+@media (max-width:480px){
+  .site-footer{ padding:40px 0 24px; }
+  .footer-inner{ padding:0 20px; }
+}
+
+/* ---------- Back to top button doesn't overlap content on tiny screens ---------- */
+@media (max-width:480px){
+  #backToTop{ width:42px; height:42px; bottom:18px; right:18px; font-size:1rem; }
+}
+
+/* ---------- Prevent horizontal overflow from long inline nested markup ---------- */
+@media (max-width:600px){
+  .timeline-card, .about-card, .why-card, .speaker-card, .testimonial-card{
+    word-break: break-word;
+  }
+}
+
+/* ---------- Landscape phones: shrink hero so it doesn't dominate viewport ---------- */
+@media (max-height:480px) and (orientation:landscape){
+  .hero{ min-height:auto; padding:110px 24px 50px; }
+  .countdown{ margin-top:28px; }
 }
