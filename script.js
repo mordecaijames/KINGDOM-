@@ -4,7 +4,7 @@
 
 /* ---------- CONFIG ---------- */
 const CONFIG = {
-  GOOGLE_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbyohkcmtpjf2vtQcBrJxZI0UnD2cXQKNff6PtyCwAJ7Le19o_XJNknB7S595_vHC7MJ6Q/exec"
+  GOOGLE_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbw6C8O0Blp3IZiv_5P140SZoHUD3n9u_ly4XptTIrGisEzNZPEJtunxE4_3JlTEl5iZBg/exec"
 };
 
 const SESSION_DATES = [
