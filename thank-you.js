@@ -93,10 +93,6 @@ function initGuideDownload() {
   if (!btn) return;
   btn.addEventListener("click", (e) => {
     e.preventDefault();
-    btn.textContent = "Preparing Guide...";
-    setTimeout(() => {
-      btn.textContent = "Download Event Guide";
-      alert("Your Event Guide PDF is being prepared by our team and will also be emailed to you before the first session. For an immediate copy, contact us on 0802 828 2715.");
-    }, 900);
+    btn.textContent = "Preparing location...";
   });
 }
